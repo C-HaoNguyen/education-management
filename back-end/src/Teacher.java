@@ -1,19 +1,44 @@
 import java.util.Date;
 
 public class Teacher {
-    private int teacherID;
+    private int teacherId;
     private String firstName;
     private String lastName;
     private Date birthday;
+    private int salary;
 
-    public Teacher (int teacherID, String firstName, String lastName) {
-        this.teacherID = teacherID;
+    public Teacher() {
+
+    }
+
+    public Teacher(int teacherId, String firstName, String lastName) {
+        this.teacherId = teacherId;
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    public int getTeacherID() {
-        return teacherID;
+    public void setTeacherId(int teacherId) {
+        this.teacherId = teacherId;
+    }
+
+    public int getTeacherId() {
+        return teacherId;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 
     public String getFullName() {
