@@ -1,9 +1,13 @@
+import java.time.LocalDate;
+import java.util.Date;
+
 public class Student {
     private int studentId;
     private String firstName;
     private String lastName;
     private String address;
     private double score;
+    private LocalDate birthday;
 
     public Student() {
 
@@ -18,10 +22,6 @@ public class Student {
 
     public int getStudentId() {
         return studentId;
-    }
-
-    public void setStudentId(int studentId) {
-        this.studentId = studentId;
     }
 
     public String getFirstName() {
@@ -46,5 +46,17 @@ public class Student {
 
     public void displayName() {
         System.out.println(this.getFullName());
+    }
+
+    public void setBirthday(LocalDate date) {
+        this.birthday = date;
+    }
+
+    public LocalDate getBirthday() {
+        return birthday;
+    }
+
+    public double getScore() {
+        return score;
     }
 }

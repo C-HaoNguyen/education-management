@@ -1,10 +1,11 @@
 # Default ignored files
 /shelf/
 **/*.iml
-**/.idea
+/.idea/
 **/.project
 **/.settings
 **/.classpath
 **/targets
 **/rebel.xml
 **/target/
+/out/
