@@ -1,62 +1,33 @@
-import java.time.LocalDate;
-import java.util.Date;
-
-public class Student {
+public class Student extends Person {
     private int studentId;
-    private String firstName;
-    private String lastName;
-    private String address;
     private double score;
-    private LocalDate birthday;
 
     public Student() {
-
     }
 
     public Student(int studentId, String firstName, String lastName, String address) {
+        super(firstName, lastName, address);
         this.studentId = studentId;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
     }
 
     public int getStudentId() {
         return studentId;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getFullName() {
-        return lastName + " " + firstName;
-    }
-
-    public void displayName() {
-        System.out.println(this.getFullName());
-    }
-
-    public void setBirthday(LocalDate date) {
-        this.birthday = date;
-    }
-
-    public LocalDate getBirthday() {
-        return birthday;
-    }
-
     public double getScore() {
         return score;
+    }
+
+    // student id, first-last name
+    public void printStudentInfo() {
+        // only can use when protected
+        System.out.println(studentId + "  " + firstName + lastName);
+        System.out.println(studentId + "  " + getFirstName() + getLastName());
+    }
+
+    @Override
+    public void introduce() {
+        super.introduce();
+        System.out.println("Hello, I am student");
     }
 }

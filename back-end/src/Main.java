@@ -36,5 +36,6 @@ public class Main {
             }
         }
         System.out.println("Ngày sinh trễ nhất là: " + latestBirth.toString());
+        s1.introduce();
     }
 }
