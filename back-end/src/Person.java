@@ -60,6 +60,14 @@ public class Person {
         return -1;
     }
 
+    public String getType() {
+        return "người";
+    }
+
+    public int getId() {
+        return -1;
+    }
+
     public void displayAllInformation() {
         System.out.println("Thông tin chi tiếc của " + getType());
         System.out.println("Mã " +  getType() + ": " + getId());
