@@ -49,7 +49,7 @@ public class Person {
     }
 
     public void introduce() {
-        System.out.println("Hello I am person");
+        System.out.println("Hello I am person 2");
     }
 
     public String getType() {
