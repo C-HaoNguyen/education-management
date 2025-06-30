@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Student extends Person {
     private int studentId;
     private double score;
@@ -5,8 +7,8 @@ public class Student extends Person {
     public Student() {
     }
 
-    public Student(int studentId, String firstName, String lastName, String address) {
-        super(firstName, lastName, address);
+    public Student(int studentId, String firstName, String lastName, LocalDate birthday, String address) {
+        super(firstName, lastName, birthday, address);
         this.studentId = studentId;
     }
 
@@ -33,5 +35,12 @@ public class Student extends Person {
     public void introduce() {
         super.introduce();
         System.out.println("Hello, I am student");
+    }
+
+    public void displayALlInformation() {
+        System.out.println("Thông tin sinh viên: ");
+        System.out.println("Mã số sinh viên: " + this.getStudentId());
+        super.displayAllInformation();
+        System.out.println("Điểm tổng kết: " + this.getScore());
     }
 }
