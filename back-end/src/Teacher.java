@@ -47,6 +47,8 @@ public class Teacher extends Person {
     }
 
     public void displayAllInformation() {
+        System.out.println("Thông tin giảng viên:");
+        System.out.println("Mã giảng viên: " + this.getTeacherId());
         super.displayAllInformation();
         System.out.println("Lương: " + this.getSalary());
     }
