@@ -3,15 +3,16 @@ import java.time.LocalDate;
 public class Person {
     protected String firstName;
     protected String lastName;
-    private String address;
     private LocalDate birthday;
+    private String address;
 
     public Person() {
     }
 
-    public Person(String firstName, String lastName, String address) {
+    public Person(String firstName, String lastName, LocalDate birthday, String address) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.birthday = birthday;
         this.address = address;
     }
 
@@ -49,5 +50,21 @@ public class Person {
 
     public void introduce() {
         System.out.println("Hello I am person");
+    }
+
+    public String getType() {
+        return "người";
+    }
+
+    public int getId() {
+        return -1;
+    }
+
+    public void displayAllInformation() {
+        System.out.println("Thông tin chi tiếc của " + getType());
+        System.out.println("Mã " +  getType() + ": " + getId());
+        System.out.println("Họ và tên: " + this.getLastName() + " " + this.getFirstName());
+        System.out.println("Địa chỉ " + address);
+        System.out.println("Ngày sinh: " + birthday);
     }
 }

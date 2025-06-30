@@ -8,4 +8,4 @@
 **/targets
 **/rebel.xml
 **/target/
-/out/
+out/
