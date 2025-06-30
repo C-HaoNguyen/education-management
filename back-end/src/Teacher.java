@@ -36,9 +36,17 @@ public class Teacher extends Person {
         System.out.println("I'm a teacher");
     }
 
+    @Override
+    public String getType() {
+        return "giảng viên";
+    }
+
+    @Override
+    public int getId() {
+        return teacherId;
+    }
+
     public void displayAllInformation() {
-        System.out.println("Thông tin giảng viên:");
-        System.out.println("Mã giảng viên: " + this.getTeacherId());
         super.displayAllInformation();
         System.out.println("Lương: " + this.getSalary());
     }

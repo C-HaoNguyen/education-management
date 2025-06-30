@@ -52,7 +52,17 @@ public class Person {
         System.out.println("Hello I am person");
     }
 
+    public String getType() {
+        return "người";
+    }
+
+    public int getId() {
+        return -1;
+    }
+
     public void displayAllInformation() {
+        System.out.println("Thông tin chi tiếc của " + getType());
+        System.out.println("Mã " +  getType() + ": " + getId());
         System.out.println("Họ và tên: " + this.getLastName() + " " + this.getFirstName());
         System.out.println("Địa chỉ " + address);
         System.out.println("Ngày sinh: " + birthday);

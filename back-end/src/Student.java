@@ -37,9 +37,17 @@ public class Student extends Person {
         System.out.println("Hello, I am student");
     }
 
+    @Override
+    public String getType() {
+        return "Sinh viên";
+    }
+
+    @Override
+    public int getId() {
+        return studentId;
+    }
+
     public void displayALlInformation() {
-        System.out.println("Thông tin sinh viên: ");
-        System.out.println("Mã số sinh viên: " + this.getStudentId());
         super.displayAllInformation();
         System.out.println("Điểm tổng kết: " + this.getScore());
     }
