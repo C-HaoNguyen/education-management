@@ -20,9 +20,6 @@ public class Main {
         s3.setBirthday(LocalDate.of(2003, 3, 1));
         s3.displayName();
 
-        Teacher t = new Teacher(1, "A", "Nguuyen Van");
-        t.displayName();
-
         // find latest birthday
 
         List<Student> students = new ArrayList<>();
@@ -37,5 +34,9 @@ public class Main {
         }
         System.out.println("Ngày sinh trễ nhất là: " + latestBirth.toString());
         s1.introduce();
+
+        Teacher t = new Teacher(1, "A", "Nguuyen Van", "Da Nang");
+
+        t.introduce();
     }
 }

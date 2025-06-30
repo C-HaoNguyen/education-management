@@ -10,6 +10,10 @@ public class Student extends Person {
         this.studentId = studentId;
     }
 
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
+
     public int getStudentId() {
         return studentId;
     }
