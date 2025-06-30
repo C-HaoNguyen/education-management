@@ -1,20 +1,17 @@
+import java.sql.SQLOutput;
 import java.util.Date;
 
-public class Teacher {
+public class Teacher extends Person {
     private int teacherId;
-    private String firstName;
-    private String lastName;
-    private Date birthday;
     private int salary;
 
     public Teacher() {
 
     }
 
-    public Teacher(int teacherId, String firstName, String lastName) {
+    public Teacher(int teacherId, String firstName, String lastName, String address) {
+        super(firstName, lastName, address);
         this.teacherId = teacherId;
-        this.firstName = firstName;
-        this.lastName = lastName;
     }
 
     public void setTeacherId(int teacherId) {
@@ -25,27 +22,7 @@ public class Teacher {
         return teacherId;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getFullName() {
-        return lastName + " " + firstName;
-    }
-
-    public void displayName() {
-        System.out.println("Teacher's name is: " + this.getFullName());
+    public void introduce() {
+        System.out.println("I'm a teacher");
     }
 }
