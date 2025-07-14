@@ -50,4 +50,8 @@ public class Teacher extends Person {
         super.displayAllInformation();
         System.out.println("Lương: " + this.getSalary());
     }
+
+    public void updateAddress(String address) {
+
+    }
 }

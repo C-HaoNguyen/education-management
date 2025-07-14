@@ -51,4 +51,13 @@ public class Student extends Person {
         super.displayAllInformation();
         System.out.println("Điểm tổng kết: " + this.getScore());
     }
+
+    public void setAddress(String address) {
+        setInternalAddress(address);
+    }
+
+    @Override
+    public void updateAddress() {
+
+    }
 }
