@@ -1,13 +1,15 @@
-import java.sql.SQLOutput;
 import java.time.LocalDate;
-import java.util.Date;
 
-public class Teacher extends Person {
+public class Teacher extends Person implements Action {
     private int teacherId;
     private int salary;
 
     public Teacher() {
 
+    }
+
+    public Teacher(String firstName) {
+        this.firstName = firstName;
     }
 
     public Teacher(int teacherId, String firstName, String lastName, LocalDate birthday, String address, int salary) {
@@ -51,7 +53,27 @@ public class Teacher extends Person {
         System.out.println("Lương: " + this.getSalary());
     }
 
+    @Override
+    public String getTimeGoToSchool() {
+        return "7:00";
+    }
+
+    @Override
+    public String getPhongVeSinh() {
+        return "VIP01";
+    }
+
     public void updateAddress(String address) {
+
+    }
+
+    @Override
+    public void setAddress(final String address) {
+
+    }
+
+    @Override
+    public void updateAddress() {
 
     }
 }
