@@ -1,10 +1,14 @@
 import java.time.LocalDate;
 
-public class Student extends Person {
+public class Student extends Person implements Action{
     private int studentId;
     private double score;
 
     public Student() {
+    }
+
+    public Student(String firstName) {
+        this.firstName = firstName;
     }
 
     public Student(int studentId, String firstName, String lastName, LocalDate birthday, String address) {
@@ -59,5 +63,15 @@ public class Student extends Person {
     @Override
     public void updateAddress() {
 
+    }
+
+    @Override
+    public String getTimeGoToSchool() {
+        return "6:30";
+    }
+
+    @Override
+    public String getPhongVeSinh() {
+        return "VS1";
     }
 }
