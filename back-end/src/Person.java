@@ -1,13 +1,12 @@
 import java.time.LocalDate;
 
-public class Person {
+public abstract class Person implements SchoolAction {
     protected String firstName;
     protected String lastName;
     private LocalDate birthday;
     private String address;
 
-    public Person() {
-    }
+    public Person() {}
 
     public Person(String firstName, String lastName, LocalDate birthday, String address) {
         this.firstName = firstName;
@@ -48,6 +47,10 @@ public class Person {
         return birthday;
     }
 
+    public void setInternalAddress(String address) {
+        this.address = address;
+    }
+
     public void introduce() {
         System.out.println("Hello I am person 2");
     }
@@ -74,5 +77,9 @@ public class Person {
         System.out.println("Họ và tên: " + this.getLastName() + " " + this.getFirstName());
         System.out.println("Địa chỉ " + address);
         System.out.println("Ngày sinh: " + birthday);
+    }
+
+    public void getAddress(String address) {
+        this.address = address;
     }
 }

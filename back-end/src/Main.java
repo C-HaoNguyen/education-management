@@ -1,14 +1,23 @@
+import org.w3c.dom.ls.LSInput;
+
 import java.text.DateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        Student s = new Student();
+
+        Scanner sc = new Scanner(System.in);
+
+        
+
         Student s1 = new Student(1, "Hao1", "Nguyen", LocalDate.parse("2004-01-06"), "Ho Chi Minh");
         s1.setBirthday(LocalDate.of(2003, 1, 1));
         s1.displayName();
