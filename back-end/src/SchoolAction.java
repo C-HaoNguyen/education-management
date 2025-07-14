@@ -1,5 +1,6 @@
 public interface SchoolAction {
 
-    public void setAddress(String address);
-    public void updateAddress();
+    void updateNewAddress(String address);
+    String getEntertainmentEvent();
+    String getWorkingEvent();
 }

@@ -71,8 +71,8 @@ public abstract class Person implements SchoolAction {
         System.out.println("Ngày sinh: " + birthday);
     }
 
-    public void getAddress(String address) {
-        this.address = address;
+    public String getAddress() {
+        return address;
     }
 
     String getTimeGoToSchool() {

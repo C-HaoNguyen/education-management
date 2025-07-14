@@ -68,12 +68,17 @@ public class Teacher extends Person implements Action {
     }
 
     @Override
-    public void setAddress(final String address) {
-
+    public void updateNewAddress(final String address) {
+        setInternalAddress(address);
     }
 
     @Override
-    public void updateAddress() {
+    public String getEntertainmentEvent() {
+        return "Nhảy múa";
+    }
 
+    @Override
+    public String getWorkingEvent() {
+        return "Giảng dạy";
     }
 }

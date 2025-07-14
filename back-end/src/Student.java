@@ -56,13 +56,18 @@ public class Student extends Person implements Action{
         System.out.println("Điểm tổng kết: " + this.getScore());
     }
 
-    public void setAddress(String address) {
+    public void updateNewAddress(String address) {
         setInternalAddress(address);
     }
 
     @Override
-    public void updateAddress() {
+    public String getEntertainmentEvent() {
+        return "Nhảy dây";
+    }
 
+    @Override
+    public String getWorkingEvent() {
+        return "Làm Bài Tập";
     }
 
     @Override
