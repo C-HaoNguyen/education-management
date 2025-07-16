@@ -81,4 +81,8 @@ public class Teacher extends Person implements Action {
     public String getWorkingEvent() {
         return "Giảng dạy";
     }
+
+    public String getInfoOfMember() {
+        return "Giáo viên " + getFullName() + " " + getAge() + " tuổi tham dự lễ hội.";
+    }
 }

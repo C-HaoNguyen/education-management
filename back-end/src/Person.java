@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public abstract class Person implements SchoolAction {
+public abstract class Person implements SchoolAction, FestivalEventAction {
     protected String firstName;
     protected String lastName;
     private LocalDate birthday;
@@ -74,6 +74,14 @@ public abstract class Person implements SchoolAction {
     public String getAddress() {
         return address;
     }
+
+    public int getAge() {
+        return LocalDate.now().getYear() - birthday.getYear();
+    }
+
+    public String getInfoOfMember() {
+        return "Thành viên " + getFullName() + " " + getAge() + " tuổi tham dự lễ hội";
+    };
 
     String getTimeGoToSchool() {
         return "Person not go to school";

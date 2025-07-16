@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class Student extends Person implements Action{
+public class Student extends Person implements Action, FestivalEventAction {
     private int studentId;
     private double score;
 
@@ -78,5 +78,9 @@ public class Student extends Person implements Action{
     @Override
     public String getPhongVeSinh() {
         return "VS1";
+    }
+
+    public String getInfoOfMember() {
+        return "Sinh viên " + getFullName() + " " + getAge() + " tuổi tham dự lễ hội.";
     }
 }
