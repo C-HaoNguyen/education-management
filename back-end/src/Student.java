@@ -83,4 +83,8 @@ public class Student extends Person implements Action, FestivalEventAction {
     public String getInfoOfMember() {
         return "Sinh viên " + getFullName() + " " + getAge() + " tuổi tham dự lễ hội.";
     }
+
+    public void updateRank(double score) {
+        this.score = score;
+    }
 }
